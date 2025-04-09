@@ -4,4 +4,8 @@ function getInitials(nome = '') {
     return initials.map(c => c.charAt(0))
 }
 
-module.exports =  getInitials 
+function createSlug(STRING = ' ') {
+    return STRING.toLowerCase()
+}
+
+module.exports = { getInitials, createSlug } 
