@@ -14,4 +14,8 @@ function average(array) {
 
 }
 
-module.exports = { getInitials, createSlug, average } 
+
+function createeSlug(strings) {
+    return  strings.split(" ").join("-").toLowerCase()}
+
+module.exports = { getInitials, createSlug, average, createeSlug } 
