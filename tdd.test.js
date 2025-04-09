@@ -1,4 +1,4 @@
-const { getInitials, createSlug } = require('./functions')
+const { getInitials, createSlug, average } = require('./functions')
 
 
 test("👉 La funzione getInitials restituisce le iniziali di un nome completo.", () => {
@@ -11,8 +11,13 @@ test("👉 La funzione getInitials restituisce le iniziali di un nome completo."
 });
 
 
-
 test("👉 La funzione createSlug restituisce una stringa in lowercase.", () => {
     const string = createSlug('CRI')
     expect(string).toBe('cri')
+})
+
+const array = [1, 2, 3, 4, 5, 6];
+
+test("👉 La funzione average calcola la media aritmetica di un array di numeri.", () => {
+    expect(average(array)).toBe(3.5)
 })

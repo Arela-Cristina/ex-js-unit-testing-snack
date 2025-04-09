@@ -8,4 +8,10 @@ function createSlug(STRING = ' ') {
     return STRING.toLowerCase()
 }
 
-module.exports = { getInitials, createSlug } 
+function average(array) {
+    somma = array.reduce((acc, curr) => acc + curr, 0)
+    return somma / array.length
+
+}
+
+module.exports = { getInitials, createSlug, average } 
