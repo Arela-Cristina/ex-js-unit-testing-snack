@@ -46,31 +46,34 @@ test("👉 La funzione createeeSlug lancia un errore se il titolo è vuoto o non
     expect(() => createeeSlug()).toThrow()
 })
 
-const posts = [
-    {
-        id: 1,
-        title: "Introduzione a JavaScript",
-        slug: "introduzione-a-javascript"
-    },
-    {
-        id: 2,
-        title: "Guida a React",
-        slug: "guida-a-react"
-    },
-    {
-        id: 3,
-        title: "Cos'è un API REST",
-        slug: "cose-un-api-rest"
-    }
-];
+describe('findPostById', () => {
+
+    const posts = [
+        {
+            id: 1,
+            title: "Introduzione a JavaScript",
+            slug: "introduzione-a-javascript"
+        },
+        {
+            id: 2,
+            title: "Guida a React",
+            slug: "guida-a-react"
+        },
+        {
+            id: 3,
+            title: "Cos'è un API REST",
+            slug: "cose-un-api-rest"
+        }
+    ];
 
 
 
-test("👉 La funzione findPostById restituisce il post corretto dato l’array di post e l’id.", () => {
-    expect(findPostById(posts, 2)).toEqual(posts[1])
-    expect(findPostById(posts, 1)).toEqual(posts[0])
-    expect(findPostById(posts, 3)).toEqual(posts[2])
+    test("👉 La funzione findPostById restituisce il post corretto dato l’array di post e l’id.", () => {
+        expect(findPostById(posts, 2)).toEqual(posts[1])
+        expect(findPostById(posts, 1)).toEqual(posts[0])
+        expect(findPostById(posts, 3)).toEqual(posts[2])
 
-    expect(() => findPostById(posts, 4)).toThrowError(/Il post con id 4 non essiste/);
-    expect(() => findPostById(posts, 5)).toThrowError(/Il post con id 5 non essiste/);
+        expect(() => findPostById(posts, 4)).toThrowError(/Il post con id 4 non essiste/);
+        expect(() => findPostById(posts, 5)).toThrowError(/Il post con id 5 non essiste/);
+    })
 })
