@@ -28,4 +28,19 @@ const createeeSlug = (parametro) => {
     }
 }
 
-module.exports = { getInitials, createSlug, average, createeSlug, isPalindrome, createeeSlug } 
+
+
+function findPostById(posts, id) {
+    const parseId = parseInt(id);
+    if (isNaN(parseId)) {
+        throw new Error(`Il post con id ${parseId} non essiste`);
+    }
+
+    const post = posts.find((el) => el.id === parseId);
+    if (!post) {
+        throw new Error(`Il post con id ${parseId} non essiste`);
+    }
+    return post;
+}
+
+module.exports = { getInitials, createSlug, average, createeSlug, isPalindrome, createeeSlug, findPostById } 
