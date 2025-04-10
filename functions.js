@@ -21,4 +21,11 @@ function createeSlug(strings) {
 
 const isPalindrome = (parametro) => parametro === parametro.split('').reverse().join('');
 
-module.exports = { getInitials, createSlug, average, createeSlug, isPalindrome } 
+
+const createeeSlug = (parametro) => {
+    if (!parametro) {
+        throw new Error('Il titolo è vuoto');
+    }
+}
+
+module.exports = { getInitials, createSlug, average, createeSlug, isPalindrome, createeeSlug } 
