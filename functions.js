@@ -16,6 +16,9 @@ function average(array) {
 
 
 function createeSlug(strings) {
-    return  strings.split(" ").join("-").toLowerCase()}
+    return strings.split(" ").join("-").toLowerCase()
+}
 
-module.exports = { getInitials, createSlug, average, createeSlug } 
+const isPalindrome = (parametro) => parametro === parametro.split('').reverse().join('');
+
+module.exports = { getInitials, createSlug, average, createeSlug, isPalindrome } 

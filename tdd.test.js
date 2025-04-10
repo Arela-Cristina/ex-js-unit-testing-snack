@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createeSlug } = require('./functions')
+const { getInitials, createSlug, average, createeSlug, isPalindrome } = require('./functions')
 
 
 test("👉 La funzione getInitials restituisce le iniziali di un nome completo.", () => {
@@ -28,4 +28,14 @@ test("👉 La funzione createeSlug sostituisce gli spazi con -.", () => {
     expect(createeSlug("Questo è un test")).toBe("questo-è-un-test")
     expect(createeSlug("Final Fantasy")).toBe("final-fantasy")
     expect(createeSlug("Brawl Stars")).toBe("brawl-stars")
+})
+
+
+
+test("👉 La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
+    expect(isPalindrome('anilina')).toBeTruthy()
+    expect(isPalindrome('seres')).toBeTruthy()
+    expect(isPalindrome('cri')).toBeFalsy()
+    expect(isPalindrome('pet')).toBeFalsy()
+
 })
