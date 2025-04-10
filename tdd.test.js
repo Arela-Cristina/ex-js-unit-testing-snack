@@ -26,4 +26,6 @@ test("👉 La funzione average calcola la media aritmetica di un array di numeri
 
 test("👉 La funzione createeSlug sostituisce gli spazi con -.", () => {
     expect(createeSlug("Questo è un test")).toBe("questo-è-un-test")
+    expect(createeSlug("Final Fantasy")).toBe("final-fantasy")
+    expect(createeSlug("Brawl Stars")).toBe("brawl-stars")
 })
